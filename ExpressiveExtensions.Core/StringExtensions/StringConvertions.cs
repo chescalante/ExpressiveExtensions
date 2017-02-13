@@ -5,43 +5,43 @@ namespace ExpressiveExtensions.Core
 {
     public static class StringConvertions
     {
-        ///// <summary>
-        ///// Base64 decodes a <see cref="string">string</see>.
-        ///// </summary>
-        ///// <param name="s">A base64 encoded <see cref="string">string</see>.</param>
-        ///// <returns>A decoded <see cref="string">string</see>.</returns>
-        ///// <example>
-        /////   <para>The following example encodes a <see cref="string">string</see> and decodes it back to its original value.</para>
-        /////   <code language="c#">
-        /////     string encoded = "Hello, World!".Base64Encode();   
-        /////     string decoded = encoded.Base64Decode();
-        /////   </code>
-        ///// </example>
-        //public static string ToBase64Decode(this string s)
-        //{
-        //    byte[] decbuff = Convert.FromBase64String(s);
+        /// <summary>
+        /// Base64 decodes a <see cref="string">string</see>.
+        /// </summary>
+        /// <param name="s">A base64 encoded <see cref="string">string</see>.</param>
+        /// <returns>A decoded <see cref="string">string</see>.</returns>
+        /// <example>
+        ///   <para>The following example encodes a <see cref="string">string</see> and decodes it back to its original value.</para>
+        ///   <code language="c#">
+        ///     string encoded = "Hello, World!".Base64Encode();   
+        ///     string decoded = encoded.Base64Decode();
+        ///   </code>
+        /// </example>
+        public static string ToBase64Decode(this string s)
+        {
+            byte[] decbuff = Convert.FromBase64String(s);
 
-        //    return Encoding.UTF8.GetString(decbuff);
-        //}
+            return Encoding.UTF8.GetString(decbuff);
+        }
 
-        ///// <summary>
-        ///// Base64 encodes a <see cref="string">string</see>.
-        ///// </summary>
-        ///// <param name="s">An input <see cref="string">string</see>.</param>
-        ///// <returns>A base64 encoded <see cref="string">string</see>.</returns>
-        ///// <example>
-        /////   <para>The following example encodes a <see cref="string">string</see> and decodes it back to its original value.</para>
-        /////   <code language="c#">
-        /////     string encoded = "Hello, World!".Base64Encode();   
-        /////     string decoded = encoded.Base64Decode();
-        /////   </code>
-        ///// </example>
-        //public static string ToBase64Encode(this string s)
-        //{
-        //    byte[] encbuff = Encoding.UTF8.GetBytes(s);
+        /// <summary>
+        /// Base64 encodes a <see cref="string">string</see>.
+        /// </summary>
+        /// <param name="s">An input <see cref="string">string</see>.</param>
+        /// <returns>A base64 encoded <see cref="string">string</see>.</returns>
+        /// <example>
+        ///   <para>The following example encodes a <see cref="string">string</see> and decodes it back to its original value.</para>
+        ///   <code language="c#">
+        ///     string encoded = "Hello, World!".Base64Encode();   
+        ///     string decoded = encoded.Base64Decode();
+        ///   </code>
+        /// </example>
+        public static string ToBase64Encode(this string s)
+        {
+            byte[] encbuff = Encoding.UTF8.GetBytes(s);
 
-        //    return Convert.ToBase64String(encbuff);
-        //}
+            return Convert.ToBase64String(encbuff);
+        }
 
         /// <summary>
         /// Converts the supplied <paramref name="Value">value</paramref> to an <see cref="Boolean">Boolean</see>.
@@ -67,21 +67,21 @@ namespace ExpressiveExtensions.Core
             }
         }
 
-        ///// <summary>
-        ///// Returns a byte array of a specified <see cref="string">string</see>.
-        ///// </summary>
-        ///// <param name="text">The text to go into the byte array.</param>
-        ///// <returns>A byte array of text.</returns>
-        ///// <example>
-        /////     <code language="c#">
-        /////         string s = "Hello, World!";
-        /////         byte[] converted = s.ToByteArray();
-        /////     </code>
-        ///// </example>
-        //public static byte[] ToByteArray(this string text)
-        //{
-        //    return Encoding.ASCII.GetBytes(text);
-        //}
+        /// <summary>
+        /// Returns a byte array of a specified <see cref="string">string</see>.
+        /// </summary>
+        /// <param name="text">The text to go into the byte array.</param>
+        /// <returns>A byte array of text.</returns>
+        /// <example>
+        ///     <code language="c#">
+        ///         string s = "Hello, World!";
+        ///         byte[] converted = s.ToByteArray();
+        ///     </code>
+        /// </example>
+        public static byte[] ToByteArray(this string text)
+        {
+            return Encoding.ASCII.GetBytes(text);
+        }
 
         /// <summary>
         /// Converts the supplied <paramref name="value">value</paramref> to a <see cref="Decimal">Decimal</see>.

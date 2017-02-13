@@ -90,7 +90,7 @@ namespace ExpressiveExtensions.Core
         ///         }
         ///     </code>
         /// </example>
-        public static bool IsValidEmailAddress(this string s)
+        public static bool IsEmailAddress(this string s)
         {
             return new Regex(Configuration.EmailPattern).IsMatch(s);
         }
@@ -105,7 +105,7 @@ namespace ExpressiveExtensions.Core
         ///         bool isValid = ipAddress.IsValidIPAddress();
         ///     </code>
         /// </example>
-        public static bool IsValidIPAddress(this string s)
+        public static bool IsIPAddress(this string s)
         {
             return Regex.IsMatch(s, Configuration.IPPattern);
         }
@@ -120,7 +120,7 @@ namespace ExpressiveExtensions.Core
         ///         bool isValid = TextBoxUrl.Text.IsValidUrl();
         ///     </code>
         /// </example>
-        public static bool IsValidUrl(this string url)
+        public static bool IsUrl(this string url)
         {
             return new Regex(Configuration.UrlPattern).IsMatch(url);
         }
